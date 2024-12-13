@@ -7,21 +7,21 @@ Random random = new Random();
 int roundsWon = 0;
 boolean playAgain = true;
         while (playAgain) {
-            // Set a limit on the number of attempts
+            
             int attemptsLeft = 5;
-            int targetNumber = random.nextInt(100) + 1;  // Generates a random number between 1 and 100
+            int targetNumber = random.nextInt(100) + 1;  
             boolean correctGuess = false;
 
             System.out.println("\nWelcome to the Number Guessing Game!");
             System.out.println("I have chosen a number between 1 and 100. Try to guess it!");
             System.out.println("You have " + attemptsLeft + " attempts to guess the number.");
 
-            // Loop for attempts
+
             while (attemptsLeft > 0 && !correctGuess) {
                 System.out.print("\nEnter your guess: ");
                 int userGuess = scanner.nextInt();
 
-                // Check if the guess is correct, too high, or too low
+               
                 if (userGuess == targetNumber) {
                     System.out.println("Congratulations! You guessed the correct number.");
                     correctGuess = true;
@@ -39,7 +39,7 @@ boolean playAgain = true;
                 }
             }
 
-            // Ask if the user wants to play another round
+            
             System.out.print("\nWould you like to play another round? (yes/no): ");
             String playAgainResponse = scanner.next();
             if (playAgainResponse.equalsIgnoreCase("no")) {
